@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket Project 🏏</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bat Ball Stump Game</h1>
+    <button onclick="
+        let computerChoose = generateComputerChoice();
+        let resultMsg = getResult('Bat',computerChoose);
+        showResultMsg('Bat',computerChoose,resultMsg);
+        ">Bat</button>
+    <button onclick="
+        computerChoose = generateComputerChoice();
+        resultMsg = getResult('Ball',computerChoose);
+        showResultMsg('Ball',computerChoose,resultMsg);
+       ">Ball</button>
+    <button onclick="
+        computerChoose = generateComputerChoice();
+        resultMsg = getResult('Stump',computerChoose);
+        showResultMsg('Stump',computerChoose,resultMsg);
+       ">Stump</button>
+
+    <script>
+      //let computerChoose;
+      let score_card = {
+        win: 0,
+        lost: 0,
+        tie: 0,
+      };
+
+      function generateComputerChoice() {
+        let randomNumber = Math.random() * 3;
+
+        if (randomNumber <= 1) {
+          return "Bat";
+        } else if (randomNumber <= 2) {
+          return "Ball";
+        } else {
+          return "Stump";
+        }
+      }
+
+
+
+      function getResult(userchoice, computerChoose) {
+        if (userchoice === "Bat") {
+          if (computerChoose === "Bat") {
+            score_card.tie++;
+            return `It's a tie`;
+          } else if (computerChoose === "Ball") {
+            score_card.win++;
+            return "User win";
+          } else {
+            score_card.lost++;
+            return "Computer win";
+          }
+        } 
+        else if (userchoice === "Ball") {
+          if (computerChoose === "Ball") {
+            score_card.tie++;
+            return `It's a tie`;
+          } else if (computerChoose === "Bat") {
+            score_card.lost++;
+            return "computer win";
+          } else {
+            score_card.win++;
+            return "user win";
+          }
+        }
+        else {
+          if (computerChoose === "Bat") {
+            score_card.win++;
+            return "User win";
+          } else if (computerChoose === "Ball") {
+            score_card.lost++;
+            return "Computer win";
+          } else {
+            score_card.tie++;
+            return `It's a tie`;
+          }
+        }
+      } 
+        function showResultMsg(userchoose,computerChoose,resultMsg){
+         alert(`User choose ${userchoose}. ComputerChoose ${computerChoose} and ${resultMsg}
+         win ${score_card.win},lost ${score_card.lost},tie ${score_card.tie}
+         `);
+      }
+      
+    </script>
+  </body>
+</html>
