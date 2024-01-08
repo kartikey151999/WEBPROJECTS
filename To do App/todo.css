@@ -1,0 +1,40 @@
+body{
+    text-align: center;
+    font-family: Arial;
+    font-weight: 600;
+    background-image: url('https://static3.bigstockphoto.com/8/1/1/large1500/118121435.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grid_container{
+    display: grid;
+    justify-content: center;
+    /* align-items: center; */
+    grid-template-columns: 270px 200px 100px;
+    column-gap: 30px;
+    row-gap: 10px;
+    margin: 10px 0px;
+}
+
+.btn{
+    padding: 8px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    font-weight: 600;
+    
+}
+.todo-btn{
+    padding:7px;
+    border-radius: 5px
+}
+.btn-add{
+    background-color: rgb(80, 165, 11);
+    color: white;
+    cursor: pointer; 
+}
+.btn-del{
+    background-color: rgb(143, 21, 21);
+    color: white;
+    cursor: pointer ;
+}
