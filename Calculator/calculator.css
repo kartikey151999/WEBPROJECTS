@@ -1,0 +1,47 @@
+#box{
+    border: 1px solid rgb(218, 210, 210);
+    border-radius: 5px;
+    height: 68vh;
+    width: 24vw;
+}
+
+#input_box{
+   
+    height: 12%;
+    margin: 10px 7px;
+    display: flex;
+    justify-content: center;
+  
+}
+
+.input{
+    border: 2px solid rgb(175, 172, 172);
+    border-radius: 3px;
+    width: 88%;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+#button_box{
+   
+    height:355px;
+    margin: 2px; 
+}
+.btn_div{
+   
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3px;
+    height: 15%;
+         
+} 
+.btn{
+    padding: 4px 21px;
+    margin: 0px 2px ;
+    border: 2px solid rgb(196, 195, 195);
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
